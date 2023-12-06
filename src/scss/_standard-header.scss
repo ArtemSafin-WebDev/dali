@@ -1,0 +1,31 @@
+.standard-header {
+  @include blockWrapper;
+}
+
+.standard-header__content {
+  @include blockContent;
+  padding-top: 28rem;
+  min-height: 60.8rem;
+
+  @include breakpoint(mobile) {
+    min-height: auto;
+    padding-top: 10rem;
+  }
+}
+
+.standard-header__heading {
+  font-size: 5.8rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 7rem;
+  font-family: var(--quietism);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-align: center;
+
+  @include breakpoint(mobile) {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 4rem;
+  }
+}

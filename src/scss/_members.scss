@@ -1,0 +1,131 @@
+.members {
+  @include blockWrapper;
+  margin-bottom: 36rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 14rem;
+  }
+}
+
+.members__content {
+  @include blockContent;
+  position: relative;
+  z-index: 1;
+}
+
+.members__decor {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  right: 19rem;
+  top: 0;
+  margin-top: -17rem;
+  width: 38rem;
+  height: auto;
+
+  @include breakpoint(mobile) {
+    width: 20rem;
+    margin-top: -10rem;
+    right: 0;
+  }
+}
+
+.members__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 22rem;
+  grid-row-gap: 11rem;
+
+  @include breakpoint(mobile) {
+    grid-gap: 2rem;
+    grid-row-gap: 2rem;
+  }
+}
+
+.members__list-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &:nth-child(even) {
+    top: 13rem;
+
+    @include breakpoint(mobile) {
+      top: 5rem;
+    }
+  }
+}
+
+.members__card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.members__card-image-container {
+  margin-bottom: 2.5rem;
+  position: relative;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 0.6rem;
+  }
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 140%;
+  }
+}
+
+.members__card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.members__card-title {
+  font-size: 4.1rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 4.2rem;
+  letter-spacing: -0.082rem;
+  font-family: var(--quietism);
+  margin-bottom: 2.3rem;
+
+  @include breakpoint(mobile) {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    letter-spacing: calc(-0.082rem / 2);
+  }
+}
+
+.members__card-role {
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.5rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+}
+
+.members__bottom-decor {
+  position: absolute;
+  width: 37.5rem;
+  height: auto;
+  z-index: -1;
+  left: 14.7rem;
+  bottom: -16rem;
+  pointer-events: none;
+
+  @include breakpoint(mobile) {
+    left: -12rem;
+    bottom: -12rem;
+    width: 24rem;
+  }
+}

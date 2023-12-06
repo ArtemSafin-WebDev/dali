@@ -1,0 +1,129 @@
+.banquets {
+  @include blockWrapper;
+  padding-bottom: 12.3rem;
+  overflow: hidden;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 8rem;
+    padding: 0;
+  }
+}
+
+.banquets__content {
+  @include blockContent;
+}
+
+.banquets__text {
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 4.4rem;
+  letter-spacing: -0.096rem;
+  font-family: var(--quietism);
+  position: relative;
+  z-index: 5;
+
+  @include breakpoint(mobile) {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    letter-spacing: calc(-0.096rem / 2);
+  }
+}
+
+.banquets__row {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.banquets__decor {
+  position: absolute;
+  left: -8rem;
+  top: 0;
+  z-index: -1;
+  pointer-events: none;
+  width: 50.9rem;
+  height: auto;
+  margin-top: -1rem;
+
+  @include breakpoint(mobile) {
+    width: 20rem;
+  }
+}
+
+.banquets__wrapper {
+  margin-left: auto;
+  width: 40rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 9rem;
+
+  @include breakpoint(mobile) {
+    padding: 0;
+    width: auto;
+    max-width: none;
+  }
+}
+
+.banquets__desc {
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.5rem;
+  margin-bottom: 4rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+  }
+
+  p {
+    margin-top: 2rem;
+
+    @include breakpoint(mobile) {
+      margin-top: 1.5rem;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.banquets__link {
+  display: block;
+  padding: 2.4rem;
+  width: 27.6rem;
+  max-width: 100%;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.052rem;
+  text-transform: uppercase;
+  font-family: var(--quietism);
+  background-color: #0c0401;
+  color: #f6f5f0;
+  transition: color 0.2s, background-color 0.2s;
+  align-self: flex-start;
+  text-align: center;
+  &:link,
+  &:visited {
+    color: #f6f5f0;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--primary-color);
+    }
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    padding: 1.8rem 2.4rem;
+  }
+}

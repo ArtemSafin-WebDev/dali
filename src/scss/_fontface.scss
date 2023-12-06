@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Mabry Pro";
+  src: url("../fonts/MabryPro-Light.woff2") format("woff2"),
+    url("../fonts/MabryPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quietism Display";
+  src: url("../fonts/QuietismDisplay-Thin.woff2") format("woff2"),
+    url("../fonts/QuietismDisplay-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quietism Display";
+  src: url("../fonts/QuietismDisplay-Regular.woff2") format("woff2"),
+    url("../fonts/QuietismDisplay-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

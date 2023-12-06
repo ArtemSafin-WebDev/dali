@@ -1,0 +1,91 @@
+.caraoke {
+  @include blockWrapper;
+
+  margin-bottom: 6rem;
+}
+
+.caraoke__content {
+  @include blockContent;
+}
+
+.caraoke__large-text {
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 4.4rem;
+  letter-spacing: -0.096rem;
+  font-family: var(--quietism);
+  position: relative;
+  z-index: 3;
+  @include breakpoint(mobile) {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    letter-spacing: calc(-0.096rem / 2);
+    margin: 0;
+    margin-bottom: 3rem;
+  }
+}
+
+.caraoke__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 9.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 5rem;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 16rem;
+  @include breakpoint(mobile) {
+    padding: 0;
+    display: block;
+    padding-bottom: 6rem;
+  }
+}
+
+.caraoke__decor {
+  position: absolute;
+  top: -3rem;
+  z-index: -1;
+  pointer-events: none;
+  width: 23.4rem;
+  height: auto;
+  left: 10.3rem;
+
+  @include breakpoint(mobile) {
+    width: 12rem;
+    top: -6rem;
+    left: auto;
+    right: 1rem;
+  }
+}
+
+.caraoke__text {
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.5rem;
+  margin-left: auto;
+  width: 100%;
+  max-width: 40rem;
+  grid-column: 2 / 3;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    max-width: none;
+    grid-column: 1 / -1;
+  }
+
+  p {
+    margin-top: 2rem;
+
+    @include breakpoint(mobile) {
+      margin-top: 1.5rem;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

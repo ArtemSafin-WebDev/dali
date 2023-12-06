@@ -1,0 +1,12 @@
+:root {
+  --primary-color: #f7b219;
+  --content-padding: 4rem;
+  --container-width: 102rem;
+  --text-color: #0c0401;
+  --quietism: "Quietism Display", serif;
+  --mabry: "Mabry Pro", sans-serif;
+
+  @include breakpoint(mobile) {
+    --content-padding: 2rem;
+  }
+}
