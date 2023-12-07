@@ -52,62 +52,7 @@
   }
 }
 
-.booking__form {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 7rem;
-
-  @include breakpoint(mobile) {
-    margin-bottom: 3rem;
-  }
-}
-
-.booking__form-fields {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  grid-gap: 1.6rem;
-  margin-bottom: 5rem;
-
-  @include breakpoint(mobile) {
-    grid-template-columns: minmax(0, 1fr);
-    margin-bottom: 3rem;
-  }
-}
-
-.booking__form-field {
-  @include breakpointMF(small-tablet) {
-    grid-column: span 2;
-    &:nth-child(1),
-    &:nth-child(2) {
-      grid-column: span 3;
-    }
-  }
-
-  @include breakpoint(mobile) {
-    grid-column: 1 / -1;
-  }
-}
-
-.booking__form-input {
-  display: block;
-  width: 100%;
-  border-radius: 1px;
-
-  padding: 0 2.2rem;
-  font-size: 1.6rem;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 2.5rem;
-  color: var(--text-color);
-  background: #f6f5f0;
-  height: 6rem;
-
-  &::placeholder {
-    color: #7e7c77;
-  }
-}
-
-.booking__form-submit {
+.booking__link {
   display: block;
   text-align: center;
   font-size: 1.8rem;
@@ -120,8 +65,17 @@
   border: 1px solid #d19102;
   padding: 1.8rem 3.6rem;
   transition: background-color 0.2s;
-  margin-bottom: 2.3rem;
+  margin-bottom: 7rem;
   font-family: var(--quietism);
+
+  @include breakpoint(mobile) {
+    margin-bottom: 4rem;
+  }
+
+  &:link,
+  &:visited {
+    color: #d19102;
+  }
   @media (hover: hover) {
     &:hover {
       background-color: #d19102;
@@ -132,66 +86,5 @@
   @include breakpoint(mobile) {
     font-size: 1.4rem;
     padding: 1.4rem 2.4rem;
-  }
-}
-
-.booking__form-policy {
-  align-self: center;
-}
-
-.booking__form-policy-checkbox {
-  cursor: pointer;
-  user-select: none;
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-}
-
-.booking__form-policy-checkbox-input {
-  display: none;
-}
-
-.booking__form-policy-checkbox-mark {
-  flex-shrink: 0;
-  width: 2.2rem;
-  height: 2.2rem;
-  display: grid;
-  place-items: center;
-  background-color: #f6f5f0;
-  border-radius: 1px;
-  svg {
-    display: block;
-    width: 100%;
-    height: 100%;
-    fill: #d19102;
-    transition: opacity 0.2s;
-    opacity: 0;
-  }
-}
-
-.booking__form-policy-checkbox-text {
-  font-size: 1.2rem;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 1.4rem;
-
-  a {
-    color: #0c0401;
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    transition: text-decoration-color 0.2s;
-
-    @media (hover: hover) {
-      &:hover {
-        text-decoration-color: #0c0401;
-      }
-    }
-  }
-}
-
-.booking__form-policy-checkbox-input:checked
-  ~ .booking__form-policy-checkbox-mark {
-  svg {
-    opacity: 1;
   }
 }

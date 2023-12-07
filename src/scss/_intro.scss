@@ -1,0 +1,120 @@
+.intro {
+  @include blockWrapper;
+  margin-bottom: 8.2rem;
+  position: relative;
+  z-index: 1;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 6rem;
+  }
+}
+
+.intro__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 32.8rem;
+    z-index: 2;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}
+
+.intro__bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro__content {
+  @include blockContent;
+  min-height: min(100vh, 121.6rem);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoint(mobile) {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+}
+
+.intro__text-content {
+  gap: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.intro__heading {
+  font-size: 5.8rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+  text-transform: uppercase;
+  font-family: var(--quietism);
+
+  @include breakpoint(mobile) {
+    font-size: 3.2rem;
+    line-height: 130%;
+  }
+}
+
+.intro__heading-text {
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.5rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+}
+
+.intro__scroll {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100%;
+  bottom: 4.5rem;
+  z-index: 2;
+  color: #d0bd94;
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
