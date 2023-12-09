@@ -1,0 +1,85 @@
+.our-time {
+  @include blockWrapper;
+  margin-bottom: 7rem;
+}
+
+.our-time__content {
+  @include blockContent;
+  position: relative;
+  z-index: 1;
+}
+
+.our-time__heading {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 1.4rem;
+  letter-spacing: 0.084rem;
+  text-transform: uppercase;
+  position: absolute;
+  right: 100%;
+  width: 15.4rem;
+  padding-right: 2rem;
+  font-family: var(--quietism);
+  white-space: nowrap;
+  top: 2rem;
+
+  @include breakpoint(mobile) {
+    position: static;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.our-time__row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  grid-gap: 6rem;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.our-time__large-text {
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 4.4rem;
+  letter-spacing: -0.096rem;
+  font-family: var(--quietism);
+  padding-right: 3rem;
+  @include breakpoint(mobile) {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    letter-spacing: -0.048rem;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.our-time__small-text {
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.5rem;
+  max-width: 46rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    max-width: none;
+  }
+
+  p {
+    margin-top: 2rem;
+
+    @include breakpoint(mobile) {
+      margin-top: 1.5rem;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

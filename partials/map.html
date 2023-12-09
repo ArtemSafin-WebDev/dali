@@ -23,7 +23,7 @@
         const markerElement = document.createElement('div');
         const pin = document.createElement('img')
         pin.className = 'contacts__map-marker-pin';
-        pin.src = '/images/pin.svg'
+        pin.src = mapElement.parentElement.getAttribute('data-pin')
         markerElement.className = 'contacts__map-marker';
         markerElement.appendChild(pin)
 

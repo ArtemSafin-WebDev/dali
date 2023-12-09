@@ -1,0 +1,46 @@
+.about-image {
+  @include blockWrapper;
+  margin-bottom: 10rem;
+  position: relative;
+  overflow: hidden;
+  backface-visibility: hidden;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 5rem;
+  }
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 50%;
+    grid-column: 1 / -1;
+  }
+}
+
+.about-image__parallax-wrapper {
+  @include breakpointMF(small-tablet) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 120%;
+
+    &--inversed {
+      top: 0;
+      bottom: auto;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    position: absolute;
+    inset: 0;
+  }
+}
+
+.about-image__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

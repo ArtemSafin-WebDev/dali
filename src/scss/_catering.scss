@@ -148,6 +148,8 @@
 
 .catering__images-card {
   position: relative;
+  overflow: hidden;
+  backface-visibility: hidden;
   &::before {
     content: "";
     display: block;
@@ -162,4 +164,24 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.catering__images-card-parallax {
+  @include breakpointMF(small-tablet) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 120%;
+
+    &--inversed {
+      top: 0;
+      bottom: auto;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    position: absolute;
+    inset: 0;
+  }
 }

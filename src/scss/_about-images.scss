@@ -1,0 +1,50 @@
+.about-images {
+  margin-bottom: 0.4rem;
+}
+
+.about-images__row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 0.4rem;
+}
+
+.about-images__item {
+  position: relative;
+  overflow: hidden;
+  backface-visibility: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 148%;
+  }
+}
+
+.about-images__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-images__item-parallax-wrapper {
+  @include breakpointMF(small-tablet) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 120%;
+
+    &--inversed {
+      top: 0;
+      bottom: auto;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    position: absolute;
+    inset: 0;
+  }
+}
